@@ -1,10 +1,3 @@
-# 共通関数定義
-# Apache License Version 2.0
-# https://www.apache.org/licenses/LICENSE-2.0.html
-
-# ReadMe
-README = 'Common Library for PyTorch\nAuthor: M. Akaishi'
-
 import numpy as np
 import matplotlib.pyplot as plt
 import japanize_matplotlib
@@ -13,7 +6,6 @@ import torch
 from torch import tensor
 import torch.nn as nn
 import torch.optim as optim
-from torchviz import make_dot
 import torchvision.transforms as transforms
 from torch.utils.data import Dataset, DataLoader
 import torchvision.datasets as datasets
@@ -211,12 +203,3 @@ def show_images_labels(loader, classes, net, device):
         plt.imshow(img)
         ax.set_axis_off()
     plt.show()
-
-
-# PyTorch乱数固定用
-
-def torch_seed(seed=123):
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.backends.cudnn.deterministic = True
-    torch.use_deterministic_algorithms = True
