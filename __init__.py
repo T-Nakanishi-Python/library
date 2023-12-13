@@ -1,7 +1,9 @@
+!pip install japanize_matplotlib | tail -n 1
+!pip install torchinfo
 import numpy as np
 import matplotlib.pyplot as plt
 import japanize_matplotlib
-
+from torchinfo import summary
 import torch
 from torch import tensor
 import torch.nn as nn
